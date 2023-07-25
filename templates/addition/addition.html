@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>図書管理アプリ - 本の追加</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    {% if msg != null %}
+    <p style="color:blue">{{msg}}</p>
+  {% endif %}
+    <h1>図書管理アプリ - 本の追加</h1>
+
+
+    <form action="{{url_for('book.addition_button')}}" method="post">
+        <div class="form-group">
+            <label for="title">タイトル:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="author">著者:</label>
+            <input type="text" id="author" name="author" required>
+        </div>
+        <div class="form-group">
+            <label for="publisher">出版社:</label>
+            <input type="text" id="publisher" name="publisher" required>
+        </div>
+        <div class="form-group">
+            <label for="publicationYear">出版年:</label>
+            <input type="text" id="publicationYear" name="publicationYear" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="追加">
+        </div>
+    </form>
+    <a href="{{url_for('back_form')}}">戻る</a>
+</body>
+</html>

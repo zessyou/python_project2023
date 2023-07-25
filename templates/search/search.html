@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>図書検索</title>
+</head>
+<body>
+    <h1>図書検索</h1>
+    <form action="{{ url_for('book.search_exe') }}" method="post">
+        タイトル：<input type="text" name="title"><br>
+        <button type="submit">検索</button>
+    </form>
+    <a href="{{url_for('back_form')}}">戻る</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>図書管理アプリ - 本の変更</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1> 本の変更</h1>
+    <form action="{{url_for('book.update_exe')}}", method="post">
+        <div class="form-group">
+            <label for="publisher">出版社:</label>
+            <input type="text" id="publisher" name="publisher" required>
+            <p>id</p>
+            <input  type="text" name="id">
+        <div class="form-group">
+            <input type="submit" value="変更">
+        </div>
+    </form>
+    <a href="{{url_for('back_form')}}">戻る</a>
+</body>
+</html>
