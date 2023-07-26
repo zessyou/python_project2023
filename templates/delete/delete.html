@@ -4,14 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>本の削除</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
-    <h1>本の削除</h1>
-    <form action = "{{url_for('book.delete_exe')}}" method = "post">
-        <input type= "text" name = "id"><br>
-        <button type= "submit">削除</button>
+    <h1 class="mt-4 mb-4">本の削除</h1>
+    <form action="{{url_for('book.delete_exe')}}" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" name="id" placeholder="本のIDを入力してください" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">削除</button>
+        </div>
     </form>
-    <a href="{{url_for('back_form')}}">戻る</a>
+    <a href="{{url_for('back_form')}}" class="btn btn-secondary btn-block">戻る</a>
+
+    <!-- Bootstrap JS (Optional, you can remove this if you don't use any Bootstrap JavaScript components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
